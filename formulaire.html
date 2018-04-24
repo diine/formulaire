@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+    <html lang="fr-FR">
+        <head>
+            <title>Formilaire en html</title>
+            <meta charset="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="stylesheet" href="formulaire.css" />
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+        </head>
+        <body>
+            <form method="post" action="action.php">
+                <fieldset>
+                    <legend>votre identité</legend>
+                    <div><label for="nom">nom:</label>
+                    <input type="text" id="nom" name="nom" placeholder="Prénom et nom " autofocus="autofocus"/></div>
+                    <div><label for="email">email:</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@domaine.fr"/></div>
+                    <div><label for="pass">mot de passe:</label>
+                    <input type="password" id="pass" name="pass" required="required" /></div>
+                    <div><label for="tel">tel:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="ex:0605201485" /></div>
+                </fieldset>
+                <fieldset>
+                    <legend>adresse de livraison</legend>
+                    <div><input type="radio" id="fr" name="pays" value="France" checked="checked"/>
+                    <label for="fr">france</label>
+                    <input type="radio" id="bn" name="pays" value="Benin"/>
+                    <label for="bn">bénin</label>
+                    <input type="radio" id="usa" name="pays" value="USA"/>
+                    <label for="usa">united states</label></div>
+                    <div class="table"><label for="ad">adresse:</label>
+                    <textarea  id="ad" name="ad" ></textarea></div>
+                    <div><select name="ville" >
+                    
+                        <optgroup label="France">
+                            <option value="paris" selected="selected">paris</option>
+                            <option value="lille">lille</option>
+                            <option value="marseille">marseille</option>
+                        </optgroup>
+                        <optgroup label="Bénin">
+                            <option value="cotonou">cotonou</option>
+                            <option value="porto-novo">porto-novo</option>
+                            <option value="parakou">parakou</option>
+                        </optgroup>
+                        <optgroup label="USA">
+                            <option value="washington">washington</option>
+                            <option value="new york">new york</option>
+                            <option value="miami">miami</option>
+                        </optgroup>   
+                    </select> </div> 
+                </fieldset>
+                <fieldset>
+                    <legend>information carte bancaire</legend>
+                    <div><p>type de carte bancaire :</p>
+                    <input type="radio" id="vi" name="cb" value="visa"/>
+                    <label for="vi">VISA</label>
+                    <input type="radio" id="am" name="cb" value="amex"/>
+                    <label for="am">amEx</label>
+                    <input type="radio" id="ma" name="cb" value="mastercard"/>
+                    <label for="ma">Mastercard</label></div>
+                    <div><label for="cb">N°CB:</label>
+                    <input type="number" id="cb" name="cb" /></div> 
+                    <div><label for="cd">code CB:</label>
+                    <input type="number" id="cd" name="cd" /></div>
+                    <div><label for="date">Date d'expiration:</label>
+                    <input type="date" id="date" name="date" /></div>  
+                </fieldset>
+               
+                <div id="last">
+                    <input type="submit" value="j'achète!"/>
+                    <input type="reset" value="annuler"/>
+                </div>
+            </form>
+        
+        </body>
+    </html>
